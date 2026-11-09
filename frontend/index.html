@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Gerenciador de Tarefas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>TaskFlow</h1>
+      <p>Gerencie suas tarefas de forma simples e eficiente</p>
+    </header>
+
+    <section class="task-form-section">
+      <h2>Nova Tarefa</h2>
+      <form id="taskForm">
+        <input type="text" id="title" placeholder="Título da tarefa" required>
+        <textarea id="description" placeholder="Descrição (opcional)"></textarea>
+        <select id="status">
+          <option value="pendente">Pendente</option>
+          <option value="em_andamento">Em Andamento</option>
+          <option value="concluida">Concluída</option>
+        </select>
+        <button type="submit" class="btn-primary">Adicionar Tarefa</button>
+      </form>
+    </section>
+
+    <section class="filters-section">
+      <input type="text" id="search" placeholder="Buscar por título...">
+      <select id="filterStatus">
+        <option value="todos">Todos os Status</option>
+        <option value="pendente">Pendente</option>
+        <option value="em_andamento">Em Andamento</option>
+        <option value="concluida">Concluída</option>
+      </select>
+    </section>
+
+    <section class="tasks-section">
+      <h2>Lista de Tarefas</h2>
+      <div id="taskList" class="task-list">
+        <!-- Tarefas injetadas via JS -->
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
